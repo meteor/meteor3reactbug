@@ -1,18 +1,35 @@
 
 Using React components inside a meteor package in a meteor 3 project will result in a React warning about multiple instances of React in the same app. It's a regression since it works fine with meteor 2.
 
-# Reproduction steps
+# How to reproduce
 
 * clone this repo
+
+# Test with meteor 2 (working as expected)
 
 * open a terminal and run the following commands:
 
 ```bash
-./bin/init
-./bin/run
+./bin/run2
 ```
 
 * open a browser and go to `http://localhost:3000/`
+
+* you should see a grey line where you can click and enter some text
+
+* open the developer console and you should see nothing
+
+# Test with meteor 3 (not working)
+
+* open a terminal and run the following commands:
+
+```bash
+./bin/run3
+```
+
+* open a browser and go to `http://localhost:3000/`
+
+* you should not see the grey line
 
 * open the developer console and you should see the following output:
 
@@ -37,7 +54,7 @@ You'll see that there's 2 instances of `react-dom` in the projet if you run the 
 ````
 
 One in the `node_modules` and one in the meteor package and it explains the React warning (You might have more than one copy of React in the same app).
-
+w
 Doing the same test with meteor 2 will work as expected and `find . -name react-dom` will only return the `node_modules` instance.
 
 I really have no idea why this is happening, is it a changes in the meteor building system or in npm?

@@ -9,7 +9,6 @@ export default function SkReactEditor({ doc, docKey }) {
   const initialConfig = {
     namespace: 'MyEditor',
     onError(err) { console.error(err); },
-    editorState: 'hello',
   };
 
   return (

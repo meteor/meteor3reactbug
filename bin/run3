@@ -1,7 +1,8 @@
 #!/bin/bash
 
-echo init...
-
 rm -rf ./node_modules
+rm -rf ./packages/sakod-core/.npm
 
 meteor npm install
+
+meteor run
