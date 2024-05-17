@@ -54,7 +54,7 @@ You'll see that there's 2 instances of `react-dom` in the projet if you run the 
 ````
 
 One in the `node_modules` and one in the meteor package and it explains the React warning (You might have more than one copy of React in the same app).
-w
+
 Doing the same test with meteor 2 will work as expected and `find . -name react-dom` will only return the `node_modules` instance.
 
 I really have no idea why this is happening, is it a changes in the meteor building system or in npm?
