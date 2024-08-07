@@ -7,7 +7,7 @@ Package.describe({
 });
 
 Npm.depends({
-  '@lexical/react': '0.14.5',
+  sonner: '1.5.0',
 });
 
 Package.onUse(api => {
@@ -22,7 +22,7 @@ Package.onUse(api => {
   ], 'client');
 
   api.addFiles([
-    'sk-editor.hbs.html',
-    'sk-editor.client.js',
+    'meteor.html',
+    'meteor.js',
   ], 'client');
 });
