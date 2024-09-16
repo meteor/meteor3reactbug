@@ -1,8 +1,11 @@
 #!/bin/bash
 
+meteor update --release 3.0.3
+
 rm -rf ./node_modules
 rm -rf ./packages/sakod-core/.npm
 
+meteor reset
 meteor npm install
 
 meteor run

@@ -3,6 +3,7 @@
 rm -rf ./node_modules
 rm -rf ./packages/sakod-core/.npm
 
+meteor reset
 meteor npm install
 
-meteor run --release 2.15 --allow-incompatible-update
+meteor run --release 2.16 --allow-incompatible-update

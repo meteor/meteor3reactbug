@@ -6,12 +6,8 @@ Package.describe({
   git: '',
 });
 
-Npm.depends({
-  sonner: '1.5.0',
-});
-
 Package.onUse(api => {
-  api.versionsFrom(['2.8.0', '3.0-rc.0']);
+  api.versionsFrom(['2.8.0', '3.0.3']);
 
   api.use('ecmascript');
 
